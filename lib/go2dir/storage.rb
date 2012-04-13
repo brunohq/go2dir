@@ -1,10 +1,18 @@
-module Go2dir
-  STORAGE_FILE = "#{ENV['HOME']}/.go2dir"
+module Go2dir::Storage
+  class << self
+    STORAGE_FILE = "#{ENV['HOME']}/.go2dir"
 
-  # Public: the path to the Json file used by boom.
-  #
-  # Returns the String path of boom's Json representation.
-  def storage_file
-    STORAGE_FILE
+    def storage_file
+      STORAGE_FILE
+    end
+
+    def save(json)
+  	  File.open(storage_file,"w") { |f| f << json.to_json } 
+    end
+
+    def load
+      json = File.read(storage_file)
+      JSON.parse(json)
+    end
   end
 end

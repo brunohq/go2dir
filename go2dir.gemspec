@@ -2,10 +2,13 @@
 require File.expand_path('../lib/go2dir/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["TODO: Write your name"]
-  gem.email         = ["TODO: Write your email address"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.authors       = ["Bruno Costa"]
+  gem.email         = ["bruno.costa@hardquarters.com"]
+  gem.summary       = "go2dir is a shorcut manager to speed up your command line cding"
+  gem.description   = "Are you tired of typing over and over again the same paths to the
+  same directories? go2dir lets you create shortcuts for your most used paths and change
+  lightning fast your current directory."
+
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
